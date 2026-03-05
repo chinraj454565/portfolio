@@ -38,11 +38,33 @@ export default function Contact() {
 
   const handleSubmit = async () => {
     if (!formData.name || !formData.email || !formData.message) return;
+
     setStatus("sending");
-    // TODO: Replace with real email service (Formspree / Resend / EmailJS)
-    await new Promise((r) => setTimeout(r, 1500));
-    setStatus("sent");
-    setFormData({ name: "", email: "", message: "" });
+
+    try {
+      const response = await fetch("https://formspree.io/f/xqeyzpjq", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        setStatus("sent");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
+
     setTimeout(() => setStatus("idle"), 4000);
   };
 
