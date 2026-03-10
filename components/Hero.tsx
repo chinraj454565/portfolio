@@ -137,7 +137,7 @@ export default function Hero() {
           >
             View Projects <ArrowDown size={16} />
           </button>
-          <a href="/resume.pdf" download className="btn-outline">
+          <a href="/Chinraj-resume.pdf" download className="btn-outline">
             <Download size={16} /> Download CV
           </a>
         </div>

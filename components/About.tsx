@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { MapPin, Mail, Phone, GraduationCap } from "lucide-react";
 import { personalInfo, education } from "../data";
+import Image from "next/image";
 
 export default function About() {
   const ref = useRef<HTMLElement>(null);
@@ -136,23 +137,20 @@ export default function About() {
               }}
             >
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                <div
-                  className="w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold"
-                  style={{
-                    background: "rgba(0,212,170,0.15)",
-                    color: "var(--accent)",
-                    border: "2px solid rgba(0,212,170,0.3)",
-                    fontFamily: "Syne, sans-serif",
-                  }}
-                >
-                  CP
+                <div className="w-50 h-50 rounded-full overflow-hidden relative border-2 border-[rgba(0,212,170,0.3)]">
+                  <Image
+                    src="/images/profile.jpeg"
+                    alt="Chinraj P"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                {/* Replace above with: <Image src="/images/profile.jpg" fill alt="Chinraj P" className="object-cover" /> */}
+
                 <p
                   className="text-xs font-mono"
                   style={{ color: "var(--text-secondary)" }}
                 >
-                  Add profile.jpg to /public/images/
+                  Chinraj P
                 </p>
               </div>
               <div

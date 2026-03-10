@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Github, ExternalLink, Star } from "lucide-react";
 import { projects } from "../data";
+import Image from "next/image";
 
 export default function Projects() {
   const ref = useRef<HTMLElement>(null);
@@ -78,43 +79,14 @@ export default function Projects() {
                   minHeight: "240px",
                 }}
               >
-                <div className="text-center p-8 space-y-4">
-                  <div
-                    className="text-7xl font-black opacity-5"
-                    style={{
-                      fontFamily: "Syne, sans-serif",
-                      color: "var(--accent)",
-                    }}
-                  >
-                    E-COM
-                  </div>
-                  <div
-                    className="grid grid-cols-3 gap-3 opacity-30"
-                    style={{ maxWidth: "320px" }}
-                  >
-                    {[
-                      "Products",
-                      "Cart",
-                      "Orders",
-                      "Auth",
-                      "Admin",
-                      "Returns",
-                    ].map((item) => (
-                      <div
-                        key={item}
-                        className="px-2 py-1.5 rounded text-xs text-center"
-                        style={{
-                          background: "rgba(0,212,170,0.1)",
-                          border: "1px solid rgba(0,212,170,0.2)",
-                          color: "var(--accent)",
-                          fontFamily: "JetBrains Mono, monospace",
-                        }}
-                      >
-                        {item}
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                {featured.image && (
+                  <Image
+                    src={featured.image}
+                    fill
+                    alt={featured.title}
+                    className="object-cover"
+                  />
+                )}
                 {/* To add image: replace above div with <Image src={featured.image} fill alt={featured.title} className="object-cover" /> */}
               </div>
 
@@ -181,19 +153,28 @@ export default function Projects() {
                     "linear-gradient(135deg, var(--bg-secondary) 0%, rgba(0,212,170,0.05) 100%)",
                 }}
               >
-                <span
-                  className="text-5xl font-black opacity-5"
-                  style={{
-                    fontFamily: "Syne, sans-serif",
-                    color: "var(--accent)",
-                  }}
-                >
-                  {project.title
-                    .split(" ")
-                    .map((w) => w[0])
-                    .join("")
-                    .slice(0, 3)}
-                </span>
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  <span
+                    className="text-5xl font-black opacity-5"
+                    style={{
+                      fontFamily: "Syne, sans-serif",
+                      color: "var(--accent)",
+                    }}
+                  >
+                    {project.title
+                      .split(" ")
+                      .map((w) => w[0])
+                      .join("")
+                      .slice(0, 3)}
+                  </span>
+                )}
                 {/* To add image: replace above with <Image src={project.image} fill alt={project.title} className="object-cover" /> */}
               </div>
 

@@ -3,11 +3,11 @@ export const personalInfo = {
   title: "Full Stack Developer",
   description:
     "I build scalable backend APIs and modern web applications using Python and TypeScript ecosystems. I enjoy designing robust systems, REST APIs, and full-stack platforms.",
-  email: "jarchin8@gmail.com",
+  email: "chinrajpl5@gmail.com",
   phone: "+91-7448445519",
-  location: "Edappady, Salem, TN",
-  github: "https://github.com/chinraj-creater",
-  linkedin: "https://linkedin.com/in/chinraj-creater",
+  location: "Salem, TN",
+  github: "https://github.com/Chinraj454565",
+  linkedin: "http://www.linkedin.com/in/chinraj-creater",
   image: "/images/profile.jpg",
 };
 
@@ -44,10 +44,10 @@ export const projects = [
     longDescription:
       "Built with Next.js on the frontend and Node.js backend, this platform handles the full e-commerce lifecycle — from product catalog browsing to cart management, order processing, and return request workflows with admin order management.",
     tech: ["Next.js", "Node.js", "Prisma", "PostgreSQL", "TypeScript"],
-    github: "https://github.com/chinraj-creater",
-    live: "#",
+    github: "https://github.com/chinraj454565?tab=repositories",
+    live: "https://fashionfc-frontend-fc.vercel.app/",
     featured: true,
-    image: "/images/ecommerce.jpg",
+    image: "/images/image.png",
   },
   {
     id: 2,
@@ -57,10 +57,9 @@ export const projects = [
     longDescription:
       "A complete blogging platform where users can create, edit, and manage blog posts. Features include authentication, commenting, and a full admin dashboard for content management.",
     tech: ["Python", "Django", "HTML", "CSS", "PostgreSQL"],
-    github: "https://github.com/chinraj-creater",
+    github: "https://github.com/chinraj454565/python_blog_site",
     live: "#",
     featured: false,
-    image: "/images/blog.jpg",
   },
   {
     id: 3,
@@ -70,10 +69,9 @@ export const projects = [
     longDescription:
       "A well-structured REST API for managing movie records. Supports full CRUD operations, advanced filtering and search, and pagination for efficient data retrieval.",
     tech: ["Python", "Django REST Framework", "PostgreSQL"],
-    github: "https://github.com/chinraj-creater",
+    github: "https://github.com/chinraj454565/Movie-API",
     live: "#",
     featured: false,
-    image: "/images/movie-api.jpg",
   },
   {
     id: 4,
@@ -83,10 +81,10 @@ export const projects = [
     longDescription:
       "A production-ready backend API following clean architecture principles. Implements modular design with controllers and service layers, complete DTO validation, and well-structured REST endpoints.",
     tech: ["NestJS", "TypeScript", "Node.js", "PostgreSQL"],
-    github: "https://github.com/chinraj-creater",
+    github:
+      "https://github.com/chinraj454565/Augmntx_restapi_profiles_clients_jobs",
     live: "#",
     featured: false,
-    image: "/images/nestjs-api.jpg",
   },
   {
     id: 5,
@@ -96,18 +94,18 @@ export const projects = [
     longDescription:
       "A fun, interactive two-player dice game playable in the browser. Features custom game rules, smooth animations, and interactive UI elements.",
     tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/chinraj-creater",
-    live: "#",
+    github: "https://github.com/chinraj454565/Web-Based-Dice-Game",
+    live: "https://chinraj-dicegame.netlify.app/",
     featured: false,
-    image: "/images/dice-game.jpg",
+    image: "/images/dice.png",
   },
 ];
 
 export const experience = [
   {
-    role: "Full Stack Developer",
-    company: "Personal Projects",
-    period: "2023 — Present",
+    role: "Full Stack Developer Intern",
+    company: "SuperLabs India, Coimbatore",
+    period: "Dec 2025 — Present",
     points: [
       "Developed REST APIs using Django REST Framework and NestJS",
       "Built a full-stack e-commerce platform using Next.js, Node.js, Prisma, and PostgreSQL",
